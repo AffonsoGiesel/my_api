@@ -5,7 +5,7 @@ Post.destroy_all
 Comment.destroy_all
 
 users = []
-3.times do
+10.times do
   user = User.new(
     name: Faker::Name.name,
     email: Faker::Internet.email,
@@ -17,7 +17,7 @@ users = []
 end
 
 posts = []
-3.times do
+10.times do
   posts << Post.create!(
     title: Faker::Book.title,
     text: Faker::Lorem.paragraph,
@@ -25,7 +25,7 @@ posts = []
   )
 end
 
-3.times do
+10.times do
   Comment.create!(
     name: Faker::Name.name,
     comment: Faker::Lorem.sentence,
